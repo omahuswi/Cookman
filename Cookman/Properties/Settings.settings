@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Cookman.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="dbDefult" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"Host = localhost;Port = 5432; Username = postgres; Password = 11111111; database = cookman"</Value>
+    </Setting>
+    <Setting Name="mainColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">204, 102, 0</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
