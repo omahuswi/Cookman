@@ -3,6 +3,7 @@ using Npgsql;
 using System;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
@@ -95,10 +96,11 @@ namespace Cookman
                 {
                     while (reader.Read())
                     {
-                        string id = reader["point_index"].ToString();
+                        string id = reader["point_id"].ToString();
+                        string index = reader["point_index"].ToString();
                         string pickuppointstreet = reader["point_street"].ToString();
                         string pickuppointnumber = reader["point_house_num"].ToString();
-                        string new_str = id + ", " + pickuppointstreet + ",д." + pickuppointnumber;
+                        string new_str = id + " " + index + " " + pickuppointstreet + " " + pickuppointnumber;
                         PickUpPointsBox.Items.Add(new_str);
                     }
                 }
@@ -245,6 +247,60 @@ namespace Cookman
             Hide();
             AuthoForm form = new AuthoForm();
             form.Show();
+        }
+
+        private void OrderButton_Click(object sender, EventArgs e)
+        {
+            string pick = PickUpPointsBox.Text;
+            string[] maspick = pick.Split(' ');
+            int idpick = Convert.ToInt32(maspick.First());
+     
+            nc.Open();
+            NpgsqlCommand npgsqlCommand = new NpgsqlCommand($"select insert_order(:_point_id, :_user_id)");
+            npgsqlCommand.Connection = nc;
+            npgsqlCommand.Parameters.AddWithValue("_point_id", idpick);
+            npgsqlCommand.Parameters.AddWithValue("_user_id", AuthoForm.IdUser);
+
+            npgsqlCommand.CommandType = CommandType.Text;
+            npgsqlCommand.ExecuteNonQuery();
+            nc.Close();
+
+            nc.Open();
+            npgsqlCommand = new NpgsqlCommand($"select select_order_id(:_user_id)");
+            npgsqlCommand.Connection = nc;
+            npgsqlCommand.Parameters.AddWithValue("_user_id", AuthoForm.IdUser);
+
+            npgsqlCommand.CommandType = CommandType.Text;
+            npgsqlCommand.ExecuteNonQuery();
+            NpgsqlDataReader reader = npgsqlCommand.ExecuteReader();
+            reader.Read();
+            int OrderId = Convert.ToInt32(reader[0]);
+            nc.Close();
+
+            ProductsBut.Columns[0].Visible = true;
+            foreach (string element in ArticleListBox.Items)
+            {
+                
+                int iindex = ArticleListBox.Items.IndexOf(element);
+                int ProductCount = Convert.ToInt32(CountListBox.Items[iindex]);
+                nc.Open();
+                npgsqlCommand = new NpgsqlCommand($"select insert_product_in_order(:_order_id, :_product_article, :_amount)");
+                npgsqlCommand.Connection = nc;
+                npgsqlCommand.Parameters.AddWithValue("_order_id", OrderId);
+                npgsqlCommand.Parameters.AddWithValue("_product_article", element);
+                npgsqlCommand.Parameters.AddWithValue("_amount", ProductCount);
+
+                npgsqlCommand.CommandType = CommandType.Text;
+                npgsqlCommand.ExecuteNonQuery();
+                nc.Close();                
+            }
+            MessageBox.Show("Заказ успешно оформлен");
+            ProductsBut.Columns[0].Visible = false;
+            ArticleListBox.Items.Clear();
+            ProductListBox.Items.Clear();
+            CountListBox.Items.Clear();
+
+            PickUpPointsBox.SelectedIndex = -1;
         }
     }
 }

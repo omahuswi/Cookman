@@ -11,6 +11,7 @@ namespace Cookman
         public static String loginUser {  get; set; }
         public static String passUser { get; set; }
         public static String roleUser { get; set; }
+        public static int IdUser { get; set; }
         MainForm f { get; set; }
 
 
@@ -27,7 +28,7 @@ namespace Cookman
         /// </summary>
         private void LoadCapcha()
         {
-            string abc = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890"; //набор символов
+            string abc = "QWERTYUIOPASDFGHJKLZXCVBNM1234567890"; //набор символов
             int kol = 6; // кол-во символов
             result = "";
             Random rnd = new Random();
@@ -66,6 +67,8 @@ namespace Cookman
 
                     if (dt.Rows.Count > 0)
                     {
+                   
+                        IdUser = Convert.ToInt32(reader["user_id"]);
                         roleUser = Convert.ToString(reader[6]);
                         f = new MainForm();
                         Hide();

@@ -33,8 +33,17 @@ namespace Cookman
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.MainPanel = new System.Windows.Forms.Panel();
             this.DesktopPanel = new System.Windows.Forms.Panel();
+            this.ExitButton1 = new System.Windows.Forms.Button();
+            this.AddInOrderButton = new System.Windows.Forms.Button();
+            this.FindButton = new System.Windows.Forms.Button();
+            this.FiltrProductBox = new System.Windows.Forms.ComboBox();
+            this.UpdateProductButton = new System.Windows.Forms.Button();
+            this.DeleteProductButton = new System.Windows.Forms.Button();
             this.ProductsBut = new System.Windows.Forms.DataGridView();
+            this.FindTextBox = new System.Windows.Forms.TextBox();
             this.OrderPanel = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.ProductListBox = new System.Windows.Forms.ListBox();
             this.ExitButton2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.ArticleListBox = new System.Windows.Forms.ListBox();
@@ -45,33 +54,24 @@ namespace Cookman
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.PickUpPointsBox = new System.Windows.Forms.ComboBox();
-            this.ProductListBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.MenuPanel = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.AddProductButton = new System.Windows.Forms.Button();
             this.TitlePanel = new System.Windows.Forms.Panel();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.AddInOrderButton = new System.Windows.Forms.Button();
-            this.FindButton = new System.Windows.Forms.Button();
-            this.FiltrProductBox = new System.Windows.Forms.ComboBox();
-            this.UpdateProductButton = new System.Windows.Forms.Button();
-            this.DeleteProductButton = new System.Windows.Forms.Button();
-            this.FindTextBox = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.ExitButton1 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.MainPanel.SuspendLayout();
             this.DesktopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsBut)).BeginInit();
             this.OrderPanel.SuspendLayout();
             this.MenuPanel.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.TitlePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainPanel
@@ -103,6 +103,91 @@ namespace Cookman
             this.DesktopPanel.Size = new System.Drawing.Size(831, 631);
             this.DesktopPanel.TabIndex = 26;
             // 
+            // ExitButton1
+            // 
+            this.ExitButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ExitButton1.FlatAppearance.BorderSize = 2;
+            this.ExitButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitButton1.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.ExitButton1.Location = new System.Drawing.Point(672, 566);
+            this.ExitButton1.Name = "ExitButton1";
+            this.ExitButton1.Size = new System.Drawing.Size(139, 44);
+            this.ExitButton1.TabIndex = 45;
+            this.ExitButton1.Text = "Выход";
+            this.ExitButton1.UseVisualStyleBackColor = true;
+            this.ExitButton1.Click += new System.EventHandler(this.ExitButton2_Click);
+            // 
+            // AddInOrderButton
+            // 
+            this.AddInOrderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.AddInOrderButton.FlatAppearance.BorderSize = 2;
+            this.AddInOrderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddInOrderButton.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.AddInOrderButton.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
+            this.AddInOrderButton.Location = new System.Drawing.Point(204, 564);
+            this.AddInOrderButton.Name = "AddInOrderButton";
+            this.AddInOrderButton.Size = new System.Drawing.Size(210, 43);
+            this.AddInOrderButton.TabIndex = 21;
+            this.AddInOrderButton.Text = "Добавить в заказ";
+            this.AddInOrderButton.UseVisualStyleBackColor = true;
+            this.AddInOrderButton.Click += new System.EventHandler(this.AddInOrderButton_Click);
+            // 
+            // FindButton
+            // 
+            this.FindButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.FindButton.FlatAppearance.BorderSize = 2;
+            this.FindButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FindButton.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.FindButton.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
+            this.FindButton.Location = new System.Drawing.Point(672, 26);
+            this.FindButton.Name = "FindButton";
+            this.FindButton.Size = new System.Drawing.Size(139, 43);
+            this.FindButton.TabIndex = 19;
+            this.FindButton.Text = "Обновить";
+            this.FindButton.UseVisualStyleBackColor = true;
+            this.FindButton.Click += new System.EventHandler(this.FindButton_Click);
+            // 
+            // FiltrProductBox
+            // 
+            this.FiltrProductBox.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.FiltrProductBox.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
+            this.FiltrProductBox.FormattingEnabled = true;
+            this.FiltrProductBox.Location = new System.Drawing.Point(23, 26);
+            this.FiltrProductBox.Name = "FiltrProductBox";
+            this.FiltrProductBox.Size = new System.Drawing.Size(184, 36);
+            this.FiltrProductBox.TabIndex = 18;
+            this.FiltrProductBox.Text = "Категория";
+            this.FiltrProductBox.SelectedIndexChanged += new System.EventHandler(this.FiltrProductBox_SelectedIndexChanged);
+            // 
+            // UpdateProductButton
+            // 
+            this.UpdateProductButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.UpdateProductButton.FlatAppearance.BorderSize = 2;
+            this.UpdateProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UpdateProductButton.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.UpdateProductButton.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
+            this.UpdateProductButton.Location = new System.Drawing.Point(23, 564);
+            this.UpdateProductButton.Name = "UpdateProductButton";
+            this.UpdateProductButton.Size = new System.Drawing.Size(152, 43);
+            this.UpdateProductButton.TabIndex = 16;
+            this.UpdateProductButton.Text = "Изменить";
+            this.UpdateProductButton.UseVisualStyleBackColor = true;
+            this.UpdateProductButton.Click += new System.EventHandler(this.UpdateProductButton_Click);
+            // 
+            // DeleteProductButton
+            // 
+            this.DeleteProductButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DeleteProductButton.FlatAppearance.BorderSize = 2;
+            this.DeleteProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteProductButton.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.DeleteProductButton.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
+            this.DeleteProductButton.Location = new System.Drawing.Point(204, 564);
+            this.DeleteProductButton.Name = "DeleteProductButton";
+            this.DeleteProductButton.Size = new System.Drawing.Size(152, 43);
+            this.DeleteProductButton.TabIndex = 8;
+            this.DeleteProductButton.Text = "Удалить";
+            this.DeleteProductButton.UseVisualStyleBackColor = true;
+            // 
             // ProductsBut
             // 
             this.ProductsBut.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -119,6 +204,18 @@ namespace Cookman
             this.ProductsBut.RowTemplate.Height = 24;
             this.ProductsBut.Size = new System.Drawing.Size(788, 456);
             this.ProductsBut.TabIndex = 1;
+            // 
+            // FindTextBox
+            // 
+            this.FindTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FindTextBox.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.FindTextBox.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
+            this.FindTextBox.Location = new System.Drawing.Point(213, 26);
+            this.FindTextBox.Name = "FindTextBox";
+            this.FindTextBox.Size = new System.Drawing.Size(438, 35);
+            this.FindTextBox.TabIndex = 4;
+            this.FindTextBox.TextChanged += new System.EventHandler(this.FindTextBox_TextChanged);
             // 
             // OrderPanel
             // 
@@ -140,6 +237,31 @@ namespace Cookman
             this.OrderPanel.Name = "OrderPanel";
             this.OrderPanel.Size = new System.Drawing.Size(468, 631);
             this.OrderPanel.TabIndex = 25;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.label5.Location = new System.Drawing.Point(140, 110);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(154, 24);
+            this.label5.TabIndex = 44;
+            this.label5.Text = "Авторизиризация";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // ProductListBox
+            // 
+            this.ProductListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ProductListBox.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.ProductListBox.FormattingEnabled = true;
+            this.ProductListBox.ItemHeight = 28;
+            this.ProductListBox.Location = new System.Drawing.Point(18, 99);
+            this.ProductListBox.Name = "ProductListBox";
+            this.ProductListBox.Size = new System.Drawing.Size(332, 172);
+            this.ProductListBox.TabIndex = 33;
             // 
             // ExitButton2
             // 
@@ -225,6 +347,7 @@ namespace Cookman
             this.OrderButton.TabIndex = 37;
             this.OrderButton.Text = "Оформить";
             this.OrderButton.UseVisualStyleBackColor = true;
+            this.OrderButton.Click += new System.EventHandler(this.OrderButton_Click);
             // 
             // label3
             // 
@@ -259,18 +382,6 @@ namespace Cookman
             this.PickUpPointsBox.Size = new System.Drawing.Size(427, 36);
             this.PickUpPointsBox.TabIndex = 34;
             // 
-            // ProductListBox
-            // 
-            this.ProductListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ProductListBox.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.ProductListBox.FormattingEnabled = true;
-            this.ProductListBox.ItemHeight = 28;
-            this.ProductListBox.Location = new System.Drawing.Point(18, 99);
-            this.ProductListBox.Name = "ProductListBox";
-            this.ProductListBox.Size = new System.Drawing.Size(332, 172);
-            this.ProductListBox.TabIndex = 33;
-            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -293,6 +404,40 @@ namespace Cookman
             this.MenuPanel.Size = new System.Drawing.Size(1299, 57);
             this.MenuPanel.TabIndex = 23;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Controls.Add(this.button2, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button3, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.AddProductButton, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1299, 57);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(153)))));
+            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
+            this.button2.Location = new System.Drawing.Point(975, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(321, 51);
+            this.button2.TabIndex = 22;
+            this.button2.Text = "Добавить пользователя";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(153)))));
@@ -308,6 +453,21 @@ namespace Cookman
             this.button1.Text = "Добавить пользователя";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(153)))));
+            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
+            this.button3.Location = new System.Drawing.Point(651, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(318, 51);
+            this.button3.TabIndex = 23;
+            this.button3.Text = "Добавить пользователя";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // AddProductButton
             // 
@@ -357,165 +517,6 @@ namespace Cookman
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
-            // AddInOrderButton
-            // 
-            this.AddInOrderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.AddInOrderButton.FlatAppearance.BorderSize = 2;
-            this.AddInOrderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddInOrderButton.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.AddInOrderButton.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
-            this.AddInOrderButton.Location = new System.Drawing.Point(204, 564);
-            this.AddInOrderButton.Name = "AddInOrderButton";
-            this.AddInOrderButton.Size = new System.Drawing.Size(210, 43);
-            this.AddInOrderButton.TabIndex = 21;
-            this.AddInOrderButton.Text = "Добавить в заказ";
-            this.AddInOrderButton.UseVisualStyleBackColor = true;
-            this.AddInOrderButton.Click += new System.EventHandler(this.AddInOrderButton_Click);
-            // 
-            // FindButton
-            // 
-            this.FindButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.FindButton.FlatAppearance.BorderSize = 2;
-            this.FindButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FindButton.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.FindButton.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
-            this.FindButton.Location = new System.Drawing.Point(672, 26);
-            this.FindButton.Name = "FindButton";
-            this.FindButton.Size = new System.Drawing.Size(139, 43);
-            this.FindButton.TabIndex = 19;
-            this.FindButton.Text = "Обновить";
-            this.FindButton.UseVisualStyleBackColor = true;
-            this.FindButton.Click += new System.EventHandler(this.FindButton_Click);
-            // 
-            // FiltrProductBox
-            // 
-            this.FiltrProductBox.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.FiltrProductBox.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
-            this.FiltrProductBox.FormattingEnabled = true;
-            this.FiltrProductBox.Location = new System.Drawing.Point(23, 26);
-            this.FiltrProductBox.Name = "FiltrProductBox";
-            this.FiltrProductBox.Size = new System.Drawing.Size(184, 36);
-            this.FiltrProductBox.TabIndex = 18;
-            this.FiltrProductBox.Text = "Категория";
-            this.FiltrProductBox.SelectedIndexChanged += new System.EventHandler(this.FiltrProductBox_SelectedIndexChanged);
-            // 
-            // UpdateProductButton
-            // 
-            this.UpdateProductButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.UpdateProductButton.FlatAppearance.BorderSize = 2;
-            this.UpdateProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UpdateProductButton.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.UpdateProductButton.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
-            this.UpdateProductButton.Location = new System.Drawing.Point(23, 564);
-            this.UpdateProductButton.Name = "UpdateProductButton";
-            this.UpdateProductButton.Size = new System.Drawing.Size(152, 43);
-            this.UpdateProductButton.TabIndex = 16;
-            this.UpdateProductButton.Text = "Изменить";
-            this.UpdateProductButton.UseVisualStyleBackColor = true;
-            this.UpdateProductButton.Click += new System.EventHandler(this.UpdateProductButton_Click);
-            // 
-            // DeleteProductButton
-            // 
-            this.DeleteProductButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DeleteProductButton.FlatAppearance.BorderSize = 2;
-            this.DeleteProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteProductButton.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.DeleteProductButton.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
-            this.DeleteProductButton.Location = new System.Drawing.Point(204, 564);
-            this.DeleteProductButton.Name = "DeleteProductButton";
-            this.DeleteProductButton.Size = new System.Drawing.Size(152, 43);
-            this.DeleteProductButton.TabIndex = 8;
-            this.DeleteProductButton.Text = "Удалить";
-            this.DeleteProductButton.UseVisualStyleBackColor = true;
-            // 
-            // FindTextBox
-            // 
-            this.FindTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.FindTextBox.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.FindTextBox.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
-            this.FindTextBox.Location = new System.Drawing.Point(213, 26);
-            this.FindTextBox.Name = "FindTextBox";
-            this.FindTextBox.Size = new System.Drawing.Size(438, 35);
-            this.FindTextBox.TabIndex = 4;
-            this.FindTextBox.TextChanged += new System.EventHandler(this.FindTextBox_TextChanged);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(153)))));
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(975, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(321, 51);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Добавить пользователя";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(153)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
-            this.button3.Location = new System.Drawing.Point(651, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(318, 51);
-            this.button3.TabIndex = 23;
-            this.button3.Text = "Добавить пользователя";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.button2, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.AddProductButton, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1299, 57);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // ExitButton1
-            // 
-            this.ExitButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ExitButton1.FlatAppearance.BorderSize = 2;
-            this.ExitButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExitButton1.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.ExitButton1.Location = new System.Drawing.Point(672, 566);
-            this.ExitButton1.Name = "ExitButton1";
-            this.ExitButton1.Size = new System.Drawing.Size(139, 44);
-            this.ExitButton1.TabIndex = 45;
-            this.ExitButton1.Text = "Выход";
-            this.ExitButton1.UseVisualStyleBackColor = true;
-            this.ExitButton1.Click += new System.EventHandler(this.ExitButton2_Click);
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 10F);
-            this.label5.Location = new System.Drawing.Point(140, 110);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(154, 24);
-            this.label5.TabIndex = 44;
-            this.label5.Text = "Авторизиризация";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -523,6 +524,7 @@ namespace Cookman
             this.ClientSize = new System.Drawing.Size(1299, 788);
             this.Controls.Add(this.MainPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1317, 835);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Поворёнок";
@@ -535,10 +537,10 @@ namespace Cookman
             this.OrderPanel.ResumeLayout(false);
             this.OrderPanel.PerformLayout();
             this.MenuPanel.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.TitlePanel.ResumeLayout(false);
             this.TitlePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

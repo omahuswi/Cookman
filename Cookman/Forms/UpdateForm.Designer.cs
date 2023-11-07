@@ -35,7 +35,16 @@ namespace Cookman.Forms
             this.TitleLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox10 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -47,20 +56,11 @@ namespace Cookman.Forms
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.DeleteBut = new System.Windows.Forms.Button();
-            this.UpdateButton = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.DeleteBut = new System.Windows.Forms.Button();
+            this.UpdateButton = new System.Windows.Forms.Button();
             this.TitlePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -133,6 +133,15 @@ namespace Cookman.Forms
             this.panel1.Size = new System.Drawing.Size(766, 679);
             this.panel1.TabIndex = 8;
             // 
+            // textBox10
+            // 
+            this.textBox10.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.textBox10.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
+            this.textBox10.Location = new System.Drawing.Point(50, 327);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(216, 35);
+            this.textBox10.TabIndex = 34;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -142,6 +151,80 @@ namespace Cookman.Forms
             this.label11.Size = new System.Drawing.Size(116, 28);
             this.label11.TabIndex = 33;
             this.label11.Text = "Фото файл";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.textBox3.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
+            this.textBox3.Location = new System.Drawing.Point(52, 258);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(216, 35);
+            this.textBox3.TabIndex = 32;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.richTextBox1.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
+            this.richTextBox1.Location = new System.Drawing.Point(317, 258);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(392, 105);
+            this.richTextBox1.TabIndex = 31;
+            this.richTextBox1.Text = "";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.comboBox1.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(50, 327);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(218, 36);
+            this.comboBox1.TabIndex = 30;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.textBox9.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
+            this.textBox9.Location = new System.Drawing.Point(317, 539);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(392, 35);
+            this.textBox9.TabIndex = 29;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.textBox8.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
+            this.textBox8.Location = new System.Drawing.Point(317, 470);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(392, 35);
+            this.textBox8.TabIndex = 28;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.textBox7.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
+            this.textBox7.Location = new System.Drawing.Point(50, 539);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(218, 35);
+            this.textBox7.TabIndex = 27;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.textBox6.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
+            this.textBox6.Location = new System.Drawing.Point(52, 470);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(216, 35);
+            this.textBox6.TabIndex = 26;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.textBox5.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
+            this.textBox5.Location = new System.Drawing.Point(317, 397);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(392, 35);
+            this.textBox5.TabIndex = 24;
             // 
             // pictureBox2
             // 
@@ -252,101 +335,6 @@ namespace Cookman.Forms
             this.label1.TabIndex = 13;
             this.label1.Text = "Артикул";
             // 
-            // DeleteBut
-            // 
-            this.DeleteBut.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.DeleteBut.Location = new System.Drawing.Point(395, 614);
-            this.DeleteBut.Name = "DeleteBut";
-            this.DeleteBut.Size = new System.Drawing.Size(142, 43);
-            this.DeleteBut.TabIndex = 8;
-            this.DeleteBut.Text = "Отмена";
-            this.DeleteBut.UseVisualStyleBackColor = true;
-            this.DeleteBut.Click += new System.EventHandler(this.DeleteBut_Click);
-            // 
-            // UpdateButton
-            // 
-            this.UpdateButton.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.UpdateButton.Location = new System.Drawing.Point(567, 614);
-            this.UpdateButton.Name = "UpdateButton";
-            this.UpdateButton.Size = new System.Drawing.Size(142, 43);
-            this.UpdateButton.TabIndex = 7;
-            this.UpdateButton.Text = "Изменить";
-            this.UpdateButton.UseVisualStyleBackColor = true;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.textBox3.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
-            this.textBox3.Location = new System.Drawing.Point(52, 258);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(216, 35);
-            this.textBox3.TabIndex = 32;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.richTextBox1.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
-            this.richTextBox1.Location = new System.Drawing.Point(317, 258);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(392, 105);
-            this.richTextBox1.TabIndex = 31;
-            this.richTextBox1.Text = "";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.comboBox1.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(50, 327);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(218, 36);
-            this.comboBox1.TabIndex = 30;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.textBox9.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
-            this.textBox9.Location = new System.Drawing.Point(317, 539);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(392, 35);
-            this.textBox9.TabIndex = 29;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.textBox8.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
-            this.textBox8.Location = new System.Drawing.Point(317, 470);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(392, 35);
-            this.textBox8.TabIndex = 28;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.textBox7.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
-            this.textBox7.Location = new System.Drawing.Point(50, 539);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(218, 35);
-            this.textBox7.TabIndex = 27;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.textBox6.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
-            this.textBox6.Location = new System.Drawing.Point(52, 470);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(216, 35);
-            this.textBox6.TabIndex = 26;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.textBox5.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
-            this.textBox5.Location = new System.Drawing.Point(317, 397);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(392, 35);
-            this.textBox5.TabIndex = 24;
-            // 
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Comic Sans MS", 12F);
@@ -374,14 +362,27 @@ namespace Cookman.Forms
             this.textBox1.Size = new System.Drawing.Size(392, 35);
             this.textBox1.TabIndex = 9;
             // 
-            // textBox10
+            // DeleteBut
             // 
-            this.textBox10.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.textBox10.ForeColor = global::Cookman.Properties.Settings.Default.mainColor;
-            this.textBox10.Location = new System.Drawing.Point(50, 327);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(216, 35);
-            this.textBox10.TabIndex = 34;
+            this.DeleteBut.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.DeleteBut.Location = new System.Drawing.Point(395, 614);
+            this.DeleteBut.Name = "DeleteBut";
+            this.DeleteBut.Size = new System.Drawing.Size(142, 43);
+            this.DeleteBut.TabIndex = 8;
+            this.DeleteBut.Text = "Отмена";
+            this.DeleteBut.UseVisualStyleBackColor = true;
+            this.DeleteBut.Click += new System.EventHandler(this.DeleteBut_Click);
+            // 
+            // UpdateButton
+            // 
+            this.UpdateButton.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.UpdateButton.Location = new System.Drawing.Point(567, 614);
+            this.UpdateButton.Name = "UpdateButton";
+            this.UpdateButton.Size = new System.Drawing.Size(142, 43);
+            this.UpdateButton.TabIndex = 7;
+            this.UpdateButton.Text = "Изменить";
+            this.UpdateButton.UseVisualStyleBackColor = true;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
             // UpdateForm
             // 
